@@ -1,0 +1,25 @@
+body {
+  font-family: poppins;
+}
+
+table {
+  border-radius: 10px;
+}
+
+th {
+  padding: 10px;
+  background-color: yellow;
+}
+
+.baris1 {
+  /* color: white; */
+  background-color: cyan;
+}
+.baris2 {
+  color: white;
+  background-color: black;
+}
+.baris3 {
+  /* color: white; */
+  background-color: darksalmon;
+}
