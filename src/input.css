@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-login-comp {
+    @apply mt-3 bg-white text-primary px-1 py-2 rounded-md font-semibold hover:bg-opacity-90;
+  }
+}
