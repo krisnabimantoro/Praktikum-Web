@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="w-96 bg-black rounded-md p-4">
+        <div>
+          <h1 class="text-white text-center text-xl font-bold">To do list</h1>
+
+          <div>
+            <input type="text" name="" id="todoText" placeholder="Add your items" class="todo-input" />
+            <button
+              class="mt-12 bg-slate-100 px-3 ml-1 rounded-md text-black font-semibold"
+              onclick="CreateToDoItems()"
+              id="AddUpdateClick"
+            >
+              Add
+            </button>
+          </div>
+        </div>
+
+        <h5 id="Alert"></h5>
+        <ul id="list-items" class="list-items"></ul>
+      </div>
+    </div>
+  </body>
+  <script src="./todo.js"></script>
+</html>

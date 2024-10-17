@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="w-96 bg-black rounded-md p-4">
+        <div class="w-full text-end">
+          <p class="text-white text-3xl" id="user-input">0</p>
+        </div>
+        <div class="grid grid-cols-4 gap-2 mt-12">
+          <button class="bg-orange-500 p-2 rounded-md text-white text-lg font-semibold operations key-others">AC</button>
+          <button class="bg-orange-500 p-2 rounded-md text-white text-lg font-semibold operations key-others">DEL</button>
+          <button class="bg-orange-500 p-2 rounded-md text-white text-lg font-semibold operations key-others">%</button>
+          <button class="bg-orange-500 p-2 rounded-md text-white text-lg font-semibold operations key-operate">/</button>
+
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold numbers">7</button>
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold numbers">8</button>
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold numbers">9</button>
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold operations key-operate">*</button>
+
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold numbers">4</button>
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold numbers">5</button>
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold numbers">6</button>
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold operations key-operate">-</button>
+
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold numbers">1</button>
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold numbers">2</button>
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold numbers">3</button>
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold operations key-operate">+</button>
+
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold numbers col-span-2 key-zero">0</button>
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold numbers">.</button>
+          <button class="bg-white p-2 rounded-md text-black text-lg font-semibold operations key-operate">=</button>
+        </div>
+      </div>
+      <button class="mt-12 bg-slate-300 p-2 rounded-md text-black text-lg font-semibold" onclick="move()">tugas 2</button>
+    </div>
+  </body>
+  <script src="./calculator.js"></script>
+</html>
