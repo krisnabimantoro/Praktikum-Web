@@ -33,7 +33,6 @@ const calculate = document.querySelectorAll(".operations").forEach(function (ite
   });
 });
 
-
 function move() {
-    window.location.href = "./tugas.html";
-  }
+  window.location.href = "./tugas.html";
+}
