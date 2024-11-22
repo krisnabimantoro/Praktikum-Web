@@ -54,6 +54,7 @@ class Product extends DatabaseConfig{
         $productName = $data['product_name'];
         $query = "update product set product_name = ? where id =?";
 
+        
         $stmt = $this->conn->prepare($query);
         $stmt->bind_param("si",$productName,$id);
         $stmt->execute();
