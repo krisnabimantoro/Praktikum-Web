@@ -6,7 +6,7 @@ include "Config/DatabaseConfig.php";
 use Config\DatabaseConfig;
 use mysqli;
 
-class Product extends DatabaseConfig{
+class Event extends DatabaseConfig{
     public $conn;
 
     public function __construct(){
@@ -18,7 +18,7 @@ class Product extends DatabaseConfig{
     }
 
     public function findAll(){
-        $sql = "Select * from product";
+        $sql = "Select * from event";
         $result = $this->conn->query($sql);
         $this->conn->close();
         $data = [];
@@ -29,7 +29,7 @@ class Product extends DatabaseConfig{
     }
 
     public function findById($id){
-        $sql = "select * from product where id = ?";
+        $sql = "select * from event where id = ?";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("i", $id);
         $stmt->execute();
@@ -43,24 +43,47 @@ class Product extends DatabaseConfig{
     }
 
     public function create($data){
-        $productName = $data['product_name'];
-        $query = "insert into product (product_name) values (?)";
+        $eventName = $data['name'];
+        $description = $data['description'];
+        $dateEvent = $data['date_event'];
+        $imageEvent = $data['image_event'];
+        $locate = $data['locate'];
+        $targetAudiens = $data['target_audiens'];
+
+        $query = "INSERT INTO event (name, description, date_event, image_event, locate, target_audiens) 
+                VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($query);
-        $stmt->bind_param("s",$productName);
+        $stmt->bind_param("ssssss", $eventName, $description, $dateEvent, $imageEvent, $locate, $targetAudiens);
+
         $stmt->execute();
         $this->conn->close();
     }
     public function update($data,$id, ){
-        $productName = $data['product_name'];
-        $query = "update product set product_name = ? where id =?";
+        $eventName = $data['name'];
+        $description = $data['description'];
+        $dateEvent = $data['date_event'];
+        $imageEvent = $data['image_event'];
+        $locate = $data['locate'];
+        $targetAudiens = $data['target_audiens'];
+        
+        $query = "UPDATE event 
+                  SET name = ?, 
+                      description = ?, 
+                      date_event = ?, 
+                      image_event = ?, 
+                      locate = ?, 
+                      target_audiens = ? 
+                  WHERE id = ?";
 
         $stmt = $this->conn->prepare($query);
-        $stmt->bind_param("si",$productName,$id);
+        $stmt->bind_param("ssssssi", $eventName, $description, $dateEvent, $imageEvent, $locate, $targetAudiens, $id);
+
+
         $stmt->execute();
         $this->conn->close();
     }
     public function delete($id){
-        $query = "delete from product where id = ?";
+        $query = "delete from event where id = ?";
         $stmt = $this->conn->prepare($query);
         $stmt->bind_param("i",$id);
         $stmt->execute();
