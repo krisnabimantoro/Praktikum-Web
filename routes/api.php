@@ -8,3 +8,4 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::apiResource('/event', App\Http\Controllers\EventController::class);
+Route::apiResource('/interest', App\Http\Controllers\InterestController::class);

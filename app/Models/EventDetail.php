@@ -19,6 +19,6 @@ class EventDetail extends Model
 
     public function events()
     {
-        return $this->hasMany(Event::class, 'id_event_detail');
+        return $this->hasOne(Event::class, 'id_event_detail');
     }
 }
